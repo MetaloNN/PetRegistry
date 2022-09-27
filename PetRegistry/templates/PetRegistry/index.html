@@ -1,0 +1,24 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div style="display: flex ; "> 
+
+    {% for pet in pets %}
+
+    
+      <div style="margin: 20px auto; border:1px solid white; margin-bottom:10px; width: 25%; background-color: black; color: white; padding: 20px; ">
+        <p><span style="color:darkorange">Nombre:</span> {{pet.name}}</p>
+        <p><span style="color:darkorange">Fecha Nacimiento:</span> {{pet.birth}}</p>
+        <p><span style="color:darkorange">Color:</span> {{pet.color}}</p>
+      </div>
+    
+      
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
